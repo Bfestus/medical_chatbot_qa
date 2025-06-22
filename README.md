@@ -56,10 +56,15 @@ This chatbot project focuses on **healthcare**, where users can ask natural-lang
 - Data batching: Used `DataCollatorForSeq2Seq` to handle dynamic padding
 
 ### 📊 Experiments
-| Experiment | Epochs | Batch Size | Learning Rate | Validation Loss |
-|-----------|--------|------------|----------------|------------------|
-| Base Run | 10 | 8 | 5e-5 | 1.82 |
-| Final Run | 30 | 8 | 5e-5 | **1.24** |
+| Experiment       | Epochs | Batch Size | Learning Rate | Validation Loss | Notes |
+|------------------|--------|------------|----------------|------------------|-------|
+| Base Run         | 10     | 8          | 5e-5           | 1.82             | Default settings |
+| Final Run        | 30     | 8          | 5e-5           | **1.24**         | Best performance |
+| Exp A (faster LR)| 30     | 8          | 1e-4           | 1.51             | Slight overfitting |
+| Exp B (slower LR)| 30     | 8          | 1e-5           | 1.43             | Stable but slower convergence |
+| Exp C (larger batch)| 30  | 16         | 5e-5           | 1.39             | Faster training, similar results |
+| Exp D (less data)| 30     | 8          | 5e-5           | 1.93             | Used 50% of training data |
+| Exp E (shorter epochs)| 5 | 8          | 5e-5           | 2.10             | Underfitted |
 
 ---
 
