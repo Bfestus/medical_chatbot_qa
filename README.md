@@ -21,8 +21,8 @@ This chatbot project focuses on **healthcare**, where users can ask natural-lang
 ### 📂 Dataset Source
 - Format: CSV
 - Fields: `question`, `answer`, `category`
-- Total Samples (after cleaning): ~4,000+
-- Custom-refined to mimic doctor-style responses.
+- Total Samples (after cleaning): ~1,000+
+- GENERATED DATASETS OF 2 COLUMNS (QUESTIONS AND ANSWERS)
 
 ### ✅ Preprocessing Steps
 - Removed duplicates and missing entries.
